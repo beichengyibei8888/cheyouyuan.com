@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0， user-scalable=no">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<title>Document</title>
+		<style media="screen">
+
+		</style>
+	</head>
+
+	<body ng-app="myApp" ng-controller="myController">
+		<div class="wrap">
+			<div class="header">
+				<div class="hLeft"><span></span>发现</div>
+				<div class="hCenter">车友圈</div>
+				<div class="hRight"></div>
+			</div>
+			<div class="content">
+				<div class="cTop">
+					<div class="user">
+						<div class="user_name">张小六</div>
+						<img class="user_img" ng-src="img/4.jpg" alt="">
+					</div>
+				</div>
+
+				<div class="everyone" ng-repeat="item in items">
+					<div class="left"><img ng-src={{item.user_img}} alt=""></div>
+
+					<div class='right'>
+
+						<p class="article">{{item.user_name}}</p>
+						<div class='main'>
+							<p class="title">{{item.title}}</p>
+							<div>
+								<p class="img_p" ng-if="item.state==1" ng-repeat="img in item.img_array">
+								<img class="main_img" ng-src={{img}}></p>
+							<p class="img_p" ng-if="item.state==2" ng-repeat="img in item.img_array">
+								<img class="main_img2" ng-src={{img}}></p>
+							<p class="img_p" ng-if="item.state==3" ng-repeat="img in item.img_array">
+								<img class="main_img3" ng-src={{img}}></p>
+							</div>
+							
+							<div class="comment">
+								<div class="cLeft" value="1">
+									<!--<point></point>-->
+									<div my-point></div>
+									<!--<img class="img" src="img/point.png" alt=""><span class="num">0</span>-->
+								</div>
+								<div class="cRight">
+									<img src="img/comment.png" alt="">评论
+								</div>
+							</div>
+							<div class="commentList">
+								<div my-comment my-data="comments"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+	<script src="js/main.js"></script>
+
+</html>
