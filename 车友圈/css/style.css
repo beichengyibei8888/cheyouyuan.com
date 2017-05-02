@@ -5,7 +5,6 @@
 
 .wrap {
 	width: 100%;
-	/*overflow: hidden;*/
 }
 
 .header {
@@ -101,7 +100,7 @@
 }
 
 .right {
-	width: 83%;
+	width: 80%;
 	display: inline-block;
 }
 
@@ -135,14 +134,14 @@
 
 .main_img2 {
 	margin-left: 4px;
-	width: 134px;
-	height: 134px;
+	width: 111px;
+	height: 111px;
 }
 
 .main_img3 {
 	margin-left: 4px;
-	width: 88px;
-	height: 88px;
+	width: 72px;
+	height: 72px;
 }
 
 .everyone {
